@@ -20,7 +20,7 @@ LDFLAGS =   -g
 #LDFLAGS +=  -stdlib=libc++
 
 # Targets
-PROGS = sizetest datetest pointtest enumtest include_test
+PROGS = palindrome sizetest datetest pointtest enumtest include_test
 
 all: $(PROGS)
 
@@ -30,6 +30,7 @@ datetest: datetest.o date.o
 pointtest: pointtest.o point.o
 enumtest: enumtest.o eyes.o traffic_light.o
 include_test: include_test.o
+palindrome: palindrome.o palindrome_run.o
 
 # Phony targets
 .PHONY: all clean distclean

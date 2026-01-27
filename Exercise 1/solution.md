@@ -29,6 +29,8 @@ sizeof(*pp)    = 16
 
 4. A palindrome is a word that reads the same both forwards and backwards. Examples: anna, amanaplanacanalpanama. Write a function that takes a string as parameter and returns true if the word is a palindrome, false otherwise. Also write a program that reads words from the terminal and checks whether they are palindromes. Modify the makefile to build the program.
 
+See my implementation in *palindrome_run.cc*, *palindrome.cc*, and *palindrome.h* -- in addition to my changes to *Makefile*.
+
 5. C++ has the One Definition Rule, that says that definitions must occur at most once (for most things). Classes are typically declared in header files, and then care must be to avoid multiple definitions when a header file is included more than once. 
  
 Compile the program in *include_test.cc* and make sure you understand the error message and why it occurs. Then, add include guards to *foo.h* and *bar.h* to fix the error.
