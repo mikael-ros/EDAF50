@@ -1,4 +1,5 @@
 # Exercises and solutions for EDAF50 C++ Programming
+These are my personal solutions to the exercises for the EDAF50 C++ Programming course, as it was in spring 2026. This repository also contains my reasoning, usually located in the ``solution.md`` file of the respective folders. Similarly, the original questions (see "Permission"), as they were worded in spring 2026, are included as ``readme.md`` in each respective folder. 
 
 - [ ] Exercise 1
 - [ ] Exercise 2
@@ -7,3 +8,9 @@
 - [ ] Exercise 5
 - [ ] Exercise 6
 - [ ] Exercise 7
+
+## Permission
+
+Permission was granted to me, to use and publish the exercises and my solutions was granted by Sven Robertz 4th February 2026. There may also be another set of solutions on the official course page (currently Canvas), if nothing changes.
+
+However, it is not clear what license is associated with the files, if any. 
