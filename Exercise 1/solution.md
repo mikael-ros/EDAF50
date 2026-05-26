@@ -35,7 +35,48 @@
  
     *Compile the program in include_test.cc and make sure you understand the error message and why it occurs. Then, add include guards to foo.h and bar.h to fix the error.*
 
+    ```sh   
+    gcc include_test.cc -o include_test
+    In file included from include_test.cc:2:
+    bar.h:6:7: error: redefinition of ‘class Bar’
+        6 | class Bar{
+        |       ^~~
+    In file included from foo.h:1,
+                    from include_test.cc:1:
+    bar.h:6:7: note: previous definition of ‘class Bar’
+        6 | class Bar{
+        |       ^~~
+    ```
+
+    Like the error says, Bar is being redefined. This is happening, because *foo.h* includes *bar.h*, whilst *include_test.cc* includes both. *bar.h* is included twice. We can fix this by adding header guards. It is enough to do so on *bar.h*. See my changes in the related files.
+
+    I compiled using:
+    ```sh
+    g++ include_test.cc -o include_test
+    ```
+
+
+
 6. *Modern C++ has two kinds of enumeration types. The old kind of enumeration is ``enum`` which is inherited from C. That has some problems illustrated by the program enumtest.cc. Compile the program and make sure you understand the compiler errors. Also, note that enums contain integer values, and you can (perhaps by accident) assign a value that is not part of the enumeration to an enum variable.*
 
     *In modern C++ scoped enums, ``enum class``, has been introduced to address those problems. Change the program to use scoped enums to fix the errors.*
 
+    ```sh
+    g++ enumtest.cc traffic_light.cc eyes.cc -o enumtest
+    In file included from enumtest.cc:2:
+    traffic_light.h:1:34: error: ‘green’ conflicts with a previous declaration
+        1 | enum traffic_light {red, yellow, green};
+        |                                  ^~~~~
+    In file included from enumtest.cc:1:
+    eyes.h:1:25: note: previous declaration ‘eye_colour green’
+        1 | enum eye_colour {brown, green, blue};
+        |                         ^~~~~
+    enumtest.cc: In function ‘int main()’:
+    enumtest.cc:11:24: error: cannot convert ‘eye_colour’ to ‘traffic_light’ in initialization
+    11 |     traffic_light tl2 {green};
+        |                        ^~~~~
+        |                        |
+        |                        eye_colour
+    ```
+
+    *eyes.h* and *traffic_light.h* have a common enum value ``green``, which is causing the issue. To fix this, we change all enums to ``enum class`` and all usages of the enum values to ``<enum class name>::<enum value>``. See changes in *enumtest.cc*, *traffic_light.h*, *traffic_light.cc*, *eyes.h*, and *eyes.cc*.

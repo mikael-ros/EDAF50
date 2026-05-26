@@ -5,9 +5,9 @@ using std::cout;
 void print(eye_colour x)
 {
     switch(x) {
-        case brown: cout << "brown"; break;
-        case blue: cout << "blue"; break;
-        case green: cout << "green"; break;
+        case eye_colour::brown: cout << "brown"; break;
+        case eye_colour::blue: cout << "blue"; break;
+        case eye_colour::green: cout << "green"; break;
         default: cout << "???"; break;
     }
     cout << " eyes\n";

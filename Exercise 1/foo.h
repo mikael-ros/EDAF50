@@ -1,3 +1,5 @@
+#ifndef FOO_H
+#define FOO_H
 #include "bar.h"
 #include <iostream>
 using std::cout;
@@ -12,3 +14,5 @@ private:
     Bar abar;
     int val;
 };
+
+#endif
