@@ -1,15 +1,19 @@
 # Exercises and solutions for EDAF50 C++ Programming
-These are my personal solutions to the exercises for the EDAF50 C++ Programming course, as it was in spring 2026. This repository also contains my reasoning, usually located in the ``solution.md`` file of the respective folders. Similarly, the original questions (see "Permission"), as they were worded in spring 2026, are included as ``readme.md`` in each respective folder. 
+These are my personal solutions to the exercises and exams for the EDAF50 C++ Programming course, as it was in spring 2026. This repository also contains my reasoning, usually located in the ``solution.md`` file of the respective folders. Similarly, the original questions (see "Permission"), as they were worded in spring 2026, are included as ``readme.md`` in each respective folder. 
 
 This repository is associated with my [Notion database](https://mikaelrr.notion.site/Shared-Notes-Hub-D-C-LTH-f2a47297b9b146dba372e02c4f789d55?source=copy_link).
 
-- [ ] Exercise 1
+## Finished exercises
+- [x] Exercise 1 (done 2026-05-26)
 - [ ] Exercise 2
 - [ ] Exercise 3
 - [ ] Exercise 4
 - [ ] Exercise 5
 - [ ] Exercise 6
 - [ ] Exercise 7
+
+## Finished exams
+- [ ] 2025-06-03 (done )
 
 ## Permission
 

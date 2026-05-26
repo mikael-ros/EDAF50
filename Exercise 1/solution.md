@@ -1,3 +1,5 @@
+# Exercise 1 Solutions
+*Author: Mikael*
 
 1. *A class ``Date`` describes a date with year, month, and day. Your task is to implement the member functions, one of the constructors and a function to compute the number of days between two dates. The constructor that creates a ``Date`` object representing the current date is already implemented (read about the C functions for date and time handling in the man pages for localtime, if you're interested). You may ignore leap years in the ``next()`` function, if you wish.*
 
