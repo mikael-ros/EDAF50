@@ -3,7 +3,7 @@
 
 About: Memory, strings, static class members, integer conversions
 
-1. Run the program *memerrortest.cc* -- it illustrates what happens upon memory-related execution errors. Some errors are detected, some are not. In a larger program, the undetected errors would probably lead to catastrophic errors much later during the execution. Run again, under control of Valgrind or with sanitizers (see lab 1). 
+1. Run the program *[memerrortest.cc](memerrortest.cc)* -- it illustrates what happens upon memory-related execution errors. Some errors are detected, some are not. In a larger program, the undetected errors would probably lead to catastrophic errors much later during the execution. Run again, under control of Valgrind or with sanitizers (see lab 1). 
 
 2. Editors for program text usually help with matching of parentheses: when you type a ), ] or } the editor highlights the corresponding left parenthesis. Example (... is a sequence of characters except parentheses):
     ```
@@ -12,9 +12,9 @@ About: Memory, strings, static class members, integer conversions
         |<----------|
     |<------------------|
     ```
-    Implement the function ``find_left_par`` in the class Editor, test with *editortest.cc*.
+    Implement the function ``find_left_par`` in the class Editor, test with *[editortest.cc](editortest.cc)*.
 
-3. Classes can have static members, just like in Java. One example is seen in *count_objs.cc*, which uses a static member variable to count how many objects have been created of a class. Implement the static member function void ``Foo::print_count()``, so that the program compiles and running the example program prints
+3. Classes can have static members, just like in Java. One example is seen in *[count_objs.cc](count_objs.cc)*, which uses a static member variable to count how many objects have been created of a class. Implement the static member function void ``Foo::print_count()``, so that the program compiles and running the example program prints
 
     ```
     Created Foo objects = 1
@@ -32,6 +32,6 @@ About: Memory, strings, static class members, integer conversions
     Alive Foo objects:0 / 3 created
     ```
 
-4. Study the program *integer_conversion.cc*. Before running it, what do you think the output will be? Then run the program and see. Is the output what you expected?
+4. Study the program *[integer_conversion.cc](integer_conversion.cc)*. Before running it, what do you think the output will be? Then run the program and see. Is the output what you expected?
 
     Then, compile with warnings for implicit conversions enabled (``-Wconversion`` and ``-Wsign-conversion``). Do you get a warning? Do you understand it? If you have access to both g++ and clang++ (the school computers do), compare the two. (Compile with just ``-Wall`` and ``-Werror`` with both compilers.)

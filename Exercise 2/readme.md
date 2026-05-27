@@ -1,7 +1,7 @@
 # Exercise 2 Solutions
 *Author: Mikael*
 
-1. *Run the program memerrortest.cc -- it illustrates what happens upon memory-related execution errors. Some errors are detected, some are not. In a larger program, the undetected errors would probably lead to catastrophic errors much later during the execution. Run again, under control of Valgrind or with sanitizers (see lab 1).*
+1. *Run the program [memerrortest.cc](memerrortest.cc) -- it illustrates what happens upon memory-related execution errors. Some errors are detected, some are not. In a larger program, the undetected errors would probably lead to catastrophic errors much later during the execution. Run again, under control of Valgrind or with sanitizers (see lab 1).*
 
     ```console
     g++ memerrortest.cc -o memerrortest             
@@ -145,7 +145,7 @@
         |<----------|
     |<------------------|
     ```
-    *Implement the function ``find_left_par`` in the class Editor, test with editortest.cc.*
+    *Implement the function ``find_left_par`` in the class Editor, test with [editortest.cc](editortest.cc).*
 
     Some psuedocode (not following any standard):
 
@@ -168,7 +168,7 @@
     end procedure
     ```
 
-    See *editor.cc* for my implementation.
+    See *[editor.cc](editor.cc)* for my implementation.
     ```sh
     g++ editortest.cc editor.cc -o editor
     ```
@@ -185,7 +185,7 @@
 
 
 
-3. *Classes can have static members, just like in Java. One example is seen in count_objs.cc, which uses a static member variable to count how many objects have been created of a class. Implement the static member function void ``Foo::print_count()``, so that the program compiles and running the example program prints*
+3. *Classes can have static members, just like in Java. One example is seen in [count_objs.cc](count_objs.cc), which uses a static member variable to count how many objects have been created of a class. Implement the static member function void ``Foo::print_count()``, so that the program compiles and running the example program prints*
 
     ```
     Created Foo objects = 1
@@ -194,7 +194,7 @@
     Created Foo objects = 3
     ```
 
-    See my implementation of this step in *count_objs.cc* on lines commented with ``// Step 1``.
+    See my implementation of this step in **[count_objs.cc](count_objs.cc)** on lines commented with ``// Step 1``.
 
     *Add functionality to also keep track of how many objects are currently alive in the program. Change the class Foo so that it also counts the number of currently allocated objects. The output of the example program should be something like:*
 
@@ -205,11 +205,11 @@
     Alive Foo objects:0 / 3 created
     ```
 
-    See my implementation of this step in *count_objs.cc* on lines commented with ``// Step 2``.
+    See my implementation of this step in **[count_objs.cc](count_objs.cc)** on lines commented with ``// Step 2``.
 
     Note that I also added a reset function and another example. This is not necessary.
 
-4. *Study the program integer_conversion.cc. Before running it, what do you think the output will be? Then run the program and see. Is the output what you expected?*
+4. *Study the program *[integer_conversion.cc](integer_conversion.cc)*. Before running it, what do you think the output will be? Then run the program and see. Is the output what you expected?*
 
     *Then, compile with warnings for implicit conversions enabled (``-Wconversion`` and ``-Wsign-conversion``). Do you get a warning? Do you understand it? If you have access to both g++ and clang++ (the school computers do), compare the two. (Compile with just ``-Wall`` and ``-Werror`` with both compilers.)*
 
@@ -220,7 +220,7 @@
     **Result:**
 
     ```console
-    g++ integer_conversion.cc -o integer_conversion
+    g++ *[integer_conversion.cc](integer_conversion.cc)* -o integer_conversion
     ./integer_conversion
 
     a = 4.29497e+09
@@ -229,33 +229,33 @@
     ```
 
     ```console
-    g++ integer_conversion.cc -o integer_conversion -Wconversion -Wsign-conversion
-    integer_conversion.cc: In function ‘int main()’:
-    integer_conversion.cc:11:19: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+    g++ *[integer_conversion.cc](integer_conversion.cc)* -o integer_conversion -Wconversion -Wsign-conversion
+    *[integer_conversion.cc](integer_conversion.cc)*: In function ‘int main()’:
+    *[integer_conversion.cc](integer_conversion.cc)*:11:19: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
     11 |     float a = x - y;
        |                   ^
-    integer_conversion.cc:11:17: warning: conversion from ‘unsigned int’ to ‘float’ may change value [-Wconversion]
+    *[integer_conversion.cc](integer_conversion.cc)*:11:17: warning: conversion from ‘unsigned int’ to ‘float’ may change value [-Wconversion]
     11 |     float a = x - y;
        |               ~~^~~
-    integer_conversion.cc:12:17: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+    *[integer_conversion.cc](integer_conversion.cc)*:12:17: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
     12 |     int b = x - y;
        |                 ^
-    integer_conversion.cc:12:15: warning: conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+    *[integer_conversion.cc](integer_conversion.cc)*:12:15: warning: conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
     12 |     int b = x - y;
        |             ~~^~~
-    integer_conversion.cc:13:18: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+    *[integer_conversion.cc](integer_conversion.cc)*:13:18: warning: conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
     13 |     long c = x - y;
        |
     ```
 
     ```console
-    g++ integer_conversion.cc -o integer_conversion -Wall -Werror
+    g++ *[integer_conversion.cc](integer_conversion.cc)* -o integer_conversion -Wall -Werror
 
     # (gave no output)
     ```
 
     ```console
-    clang++ integer_conversion.cc -o integer_conversion -Wall -Werror
+    clang++ *[integer_conversion.cc](integer_conversion.cc)* -o integer_conversion -Wall -Werror
 
     # (gave no output)
     ```

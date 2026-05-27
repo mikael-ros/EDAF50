@@ -4,9 +4,9 @@ These are my personal solutions to the exercises and exams for the EDAF50 C++ Pr
 This repository is associated with my [Notion database](https://mikaelrr.notion.site/Shared-Notes-Hub-D-C-LTH-f2a47297b9b146dba372e02c4f789d55?source=copy_link).
 
 ## Finished exercises
-- [x] Exercise 1 (done 2026-05-26)
-- [2] Exercise 2 (done 2026-05-26)
-- [ ] Exercise 3
+- [x] [Exercise 1 (done 2026-05-26)](Exercise%201/readme.md)
+- [x] [Exercise 2 (done 2026-05-26)](Exercise%202/readme.md)
+- [ ] [Exercise 3](Exercise%203/readme.md)
 - [ ] Exercise 4
 - [ ] Exercise 5
 - [ ] Exercise 6

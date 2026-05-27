@@ -1,7 +1,7 @@
 # Exercise 3 Solutions
 *Author: Mikael*
 
-1. *The program countobj.cc contains a class that has a counter that is incremented when an object of the class is created and decremented when an object is destroyed. The function ``f`` demonstrates that the class seems to function correctly, but the functions ``g`` and ``h``  show otherwise. Correct the class so also ``g`` and ``h`` give correct results.*
+1. *The program [countobj.cc](countobj.cc) contains a class that has a counter that is incremented when an object of the class is created and decremented when an object is destroyed. The function ``f`` demonstrates that the class seems to function correctly, but the functions ``g`` and ``h``  show otherwise. Correct the class so also ``g`` and ``h`` give correct results.*
 
     Before amending the change, compiling with:
 
@@ -23,26 +23,44 @@
     - ``g`` creates a ``Counted`` object, and then reassigns it to another variable (+1 = 1)
     - ``h`` creates two ``Counted``objects, and then reassigns the second one to be equal to the first one (+1 +1 -1 = 1)
 
-    The output does not reflect this however. Running ``g`` should mean we have 1 object, and running ``h`` after should give us 2.
+    The output does not reflect this however. Running ``g`` should mean we have 1 object, which is destroyed once we leave the scope, and running ``h`` after should give us 1 again, which is destroyed when we leave the scope.
 
     This is because in both ``g`` and ``h``, we forget to construct ``Counted`` objects. We can either solve this by explicitly making a new ``Counted`` object, or we can define the copy constructor.
 
-    After the changes seen in *countobj.cc*, the program now outputs:
+    After the changes seen in *[countobj.cc](countobj.cc)*, the program now outputs:
 
     ```console
     Program start, before f() -- number of objects: 0
     After f(), before g()     -- number of objects: 0
-    After g(), before h()     -- number of objects: 1
-    After h(), program end    -- number of objects: 2
+    After g(), before h()     -- number of objects: 0
+    After h(), program end    -- number of objects: 0
     ```
 
-2. *We have started to write a class ``SVector`` that we hope will become a usable vector class. (This is a futile attempt, since we cannot hope to write a class that is as good as ``std::vector``.) The test program in svectortest.cc is intended to demonstrate that the basic functionality of the class is correct, but it gives unexpected results.*  
+2. *We have started to write a class ``SVector`` that we hope will become a usable vector class. (This is a futile attempt, since we cannot hope to write a class that is as good as ``std::vector``.) The test program in [svectortest.cc](svectortest.cc) is intended to demonstrate that the basic functionality of the class is correct, but it gives unexpected results.*  
   
     *What has happened? What is the cause of the error? Correct the class (not the test program so the program gives the expected output.*  
   
     *A similar error to the one demonstrated by the test program may occur in another circumstance. When? Correct the class so this error cannot occur.* 
 
-3. *The class ``BitBuffer`` receives bits which are packed in a byte (8 bits). As soon as the buffer is full a byte should be written (as a character) to an ostream with the function ``put(unsigned char ch)``. Implement the class, test with bitbuffertest.cc. As an example, the input ``0 1 0 0 0 0 0 1`` should give the output A.*
+    Compiling *[svectortest.cc](svectortest.cc)* with the following command:
+
+    ```sh
+    g++ svectortest.cc svector.cc -o svectortest
+    ```
+
+    And running ``./svectortest``, gives us:
+
+    ```console
+    1 2 3 4 5 6 7 8 9 10
+    10 20 30 40 50
+    free(): double free detected in tcache 2
+    [1]    11693 IOT instruction (core dumped)  ./svectortest
+    ```
+
+    Studying *[svector.cc](svector.cc)* reveals that 
+
+
+3. *The class ``BitBuffer`` receives bits which are packed in a byte (8 bits). As soon as the buffer is full a byte should be written (as a character) to an ostream with the function ``put(unsigned char ch)``. Implement the class, test with [bitbuffertest.cc](bitbuffertest.cc). As an example, the input ``0 1 0 0 0 0 0 1`` should give the output A.*
 
     *Manually testing this at the terminal is tedious.  You may want write test cases using for instance a ``std::stringstream``. A quick and dirty way is to script it in the shell. For instance, the command line ``echo "0 1 0 0  0 0 0 1   0 1 0 0  0 0 1 0   0 1 0 0  0 0 1 1" | ./bitbuffertest`` should output ABC.*
 
@@ -55,4 +73,4 @@
     Encrypted code:        69    67   122    98   111   106    41 
     Encrypted character:    E     C     z     b     o     j     )
     ```
-    *Implement the class ``Crypto``, test with cryptotest.cc.*
+    *Implement the class ``Crypto``, test with [cryptotest.cc](cryptotest.cc).*
