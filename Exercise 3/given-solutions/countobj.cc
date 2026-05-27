@@ -9,7 +9,11 @@
 class Counted {
 public:
 	Counted();
-	Counted(const Counted&); // Declare copy constructor
+	/*
+	 * An object is also created by the copy constructor. We
+	 * must add a copy constructor to count the object.
+	 */
+	Counted(const Counted&);
 	~Counted();
 	static int getNbrObj();
 private:
@@ -22,12 +26,12 @@ Counted::Counted() {
 	nbrObj++;
 }
 
-Counted::~Counted() {
-	nbrObj--;
+Counted::Counted(const Counted&) {
+	nbrObj++;
 }
 
-Counted::Counted(const Counted&) { // Copy constructor
-    nbrObj++;
+Counted::~Counted() {
+	nbrObj--;
 }
 
 int Counted::getNbrObj() {
@@ -35,20 +39,26 @@ int Counted::getNbrObj() {
 }
 
 void f() {
-    Counted c;
-    Counted* pc = new Counted;
-    delete pc;
+	Counted c;
+	Counted* pc = new Counted;
+	delete pc;
 }
 
 void g() {
-    Counted c1;
-    Counted c2 = c1;
+	Counted c1;
+	/*
+	 * Here, a new object c2 is created by the copy constructor.
+	 */
+	Counted c2 = c1;
 }
 
 void h() {
-    Counted c1;
-    Counted c2;
-    c2 = c1;
+	Counted c1;
+	Counted c2;
+	/*
+	 * No object is created here (c2 already exists).
+	 */
+	c2 = c1;
 }
 
 using std::cout;

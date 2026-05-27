@@ -25,7 +25,16 @@
 
     The output does not reflect this however. Running ``g`` should mean we have 1 object, and running ``h`` after should give us 2.
 
-    This is because in both ``g`` and ``h``, we forget to construct ``Counted`` objects
+    This is because in both ``g`` and ``h``, we forget to construct ``Counted`` objects. We can either solve this by explicitly making a new ``Counted`` object, or we can define the copy constructor.
+
+    After the changes seen in *countobj.cc*, the program now outputs:
+
+    ```console
+    Program start, before f() -- number of objects: 0
+    After f(), before g()     -- number of objects: 0
+    After g(), before h()     -- number of objects: 1
+    After h(), program end    -- number of objects: 2
+    ```
 
 2. *We have started to write a class ``SVector`` that we hope will become a usable vector class. (This is a futile attempt, since we cannot hope to write a class that is as good as ``std::vector``.) The test program in svectortest.cc is intended to demonstrate that the basic functionality of the class is correct, but it gives unexpected results.*  
   
