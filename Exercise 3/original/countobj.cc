@@ -36,13 +36,13 @@ void f() {
 }
 
 void g() {
-	Counted* c1 = new Counted;
-	Counted* c2 = c1;
+	Counted c1;
+	Counted c2 = c1;
 }
 
 void h() {
-	Counted* c1 = new Counted;
-	Counted* c2;
+	Counted c1;
+	Counted c2;
 	c2 = c1;
 }
 

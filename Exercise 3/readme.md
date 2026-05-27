@@ -1,22 +1,43 @@
+# Exercise 3 Solutions
+*Author: Mikael*
 
-# Exercise 3
-*Author: Sven Robertz, used with permission (granted 2026-02-04)*
+1. *The program countobj.cc contains a class that has a counter that is incremented when an object of the class is created and decremented when an object is destroyed. The function ``f`` demonstrates that the class seems to function correctly, but the functions ``g`` and ``h``  show otherwise. Correct the class so also ``g`` and ``h`` give correct results.*
 
-About: Copying, dynamic arrays, random numbers.
+    Before amending the change, compiling with:
 
-1. The program *countobj.cc* contains a class that has a counter that is incremented when an object of the class is created and decremented when an object is destroyed. The function ``f`` demonstrates that the class seems to function correctly, but the functions ``g`` and ``h``  show otherwise. Correct the class so also ``g`` and ``h`` give correct results.
+    ```sh
+    g++ countobj.cc -o countobj
+    ```
 
-2. We have started to write a class ``SVector`` that we hope will become a usable vector class. (This is a futile attempt, since we cannot hope to write a class that is as good as ``std::vector``.) The test program in *svectortest.cc* is intended to demonstrate that the basic functionality of the class is correct, but it gives unexpected results.  
+    and running ``./countobj``, gives:
+
+    ```console
+    Program start, before f() -- number of objects: 0
+    After f(), before g()     -- number of objects: 0
+    After g(), before h()     -- number of objects: -1
+    After h(), program end    -- number of objects: -1
+    ```
+
+    After reading through the given code, it is apparent that:
+    - ``f`` creates a ``Counted`` object, and destroys it after (+1 -1 = 0)
+    - ``g`` creates a ``Counted`` object, and then reassigns it to another variable (+1 = 1)
+    - ``h`` creates two ``Counted``objects, and then reassigns the second one to be equal to the first one (+1 +1 -1 = 1)
+
+    The output does not reflect this however. Running ``g`` should mean we have 1 object, and running ``h`` after should give us 2.
+
+    This is because in both ``g`` and ``h``, we forget to construct ``Counted`` objects
+
+2. *We have started to write a class ``SVector`` that we hope will become a usable vector class. (This is a futile attempt, since we cannot hope to write a class that is as good as ``std::vector``.) The test program in svectortest.cc is intended to demonstrate that the basic functionality of the class is correct, but it gives unexpected results.*  
   
-    What has happened? What is the cause of the error? Correct the class (not the test program so the program gives the expected output.  
+    *What has happened? What is the cause of the error? Correct the class (not the test program so the program gives the expected output.*  
   
-    A similar error to the one demonstrated by the test program may occur in another circumstance. When? Correct the class so this error cannot occur.  
+    *A similar error to the one demonstrated by the test program may occur in another circumstance. When? Correct the class so this error cannot occur.* 
 
-3. The class ``BitBuffer`` receives bits which are packed in a byte (8 bits). As soon as the buffer is full a byte should be written (as a character) to an ostream with the function ``put(unsigned char ch)``. Implement the class, test with *bitbuffertest.cc*. As an example, the input ``0 1 0 0 0 0 0 1`` should give the output A.
+3. *The class ``BitBuffer`` receives bits which are packed in a byte (8 bits). As soon as the buffer is full a byte should be written (as a character) to an ostream with the function ``put(unsigned char ch)``. Implement the class, test with bitbuffertest.cc. As an example, the input ``0 1 0 0 0 0 0 1`` should give the output A.*
 
-    Manually testing this at the terminal is tedious.  You may want write test cases using for instance a ``std::stringstream``. A quick and dirty way is to script it in the shell. For instance, the command line ``echo "0 1 0 0  0 0 0 1   0 1 0 0  0 0 1 0   0 1 0 0  0 0 1 1" | ./bitbuffertest`` should output ABC.
+    *Manually testing this at the terminal is tedious.  You may want write test cases using for instance a ``std::stringstream``. A quick and dirty way is to script it in the shell. For instance, the command line ``echo "0 1 0 0  0 0 0 1   0 1 0 0  0 0 1 0   0 1 0 0  0 0 1 1" | ./bitbuffertest`` should output ABC.*
 
-4. Random numbers can be used to encrypt texts. You need a random number generator that can be initialized with a seed (the encryption key), so the same sequence of random numbers can be reproduced. The characters are encrypted by adding a random number to each character. We assume that all characters are in the interval ``[0, 256)`` and that the random numbers are in the same interval. The encrypted characters shall also be in this interval. Example:
+4. *Random numbers can be used to encrypt texts. You need a random number generator that can be initialized with a seed (the encryption key), so the same sequence of random numbers can be reproduced. The characters are encrypted by adding a random number to each character. We assume that all characters are in the interval ``[0, 256)`` and that the random numbers are in the same interval. The encrypted characters shall also be in this interval. Example:*
 
     ```
     Character:              A     t     t     a     c     k     !
@@ -25,4 +46,4 @@ About: Copying, dynamic arrays, random numbers.
     Encrypted code:        69    67   122    98   111   106    41 
     Encrypted character:    E     C     z     b     o     j     )
     ```
-    Implement the class ``Crypto``, test with *cryptotest.cc*.
+    *Implement the class ``Crypto``, test with cryptotest.cc.*
