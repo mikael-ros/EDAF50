@@ -6,10 +6,6 @@
 
 SVector::SVector(size_t size) : n(size), v(new int[n]) {}
 
-SVector::~SVector() {
-	delete[] v;
-}
-
 size_t SVector::size() const {
 	return n;
 }

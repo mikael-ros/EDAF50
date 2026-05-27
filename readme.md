@@ -6,7 +6,7 @@ This repository is associated with my [Notion database](https://mikaelrr.notion.
 ## Finished exercises
 - [x] [Exercise 1 (done 2026-05-26)](Exercise%201/readme.md)
 - [x] [Exercise 2 (done 2026-05-26)](Exercise%202/readme.md)
-- [ ] [Exercise 3](Exercise%203/readme.md)
+- [x] [Exercise 3 (done 2026-05-27)](Exercise%203/readme.md)
 - [ ] Exercise 4
 - [ ] Exercise 5
 - [ ] Exercise 6
