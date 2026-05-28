@@ -30,6 +30,8 @@ There are two ways to use this repository:
     ```
     (try at your own risk!)
 
+    And then copy the corresponding ``$dir/mikael-solutions/readme.md`` to ``$dir``, and remove the answers (anything not in italics).
+
 ## Permission
 
 Permission was granted to me, to use and publish the exercises and my solutions was granted by Sven Robertz 4th February 2026. There may also be another set of solutions on the official course page (currently Canvas), if nothing changes.
