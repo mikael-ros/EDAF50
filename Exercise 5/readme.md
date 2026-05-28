@@ -1,7 +1,49 @@
 # Exercise 5 Solutions
 *Author: Mikael*
 
-1. *Morse code is a method of transmitting text information as a series of short and long signals ('dots' and 'dashes'). For example, the letter 'a' is coded as ``.-``, 'b' as ``-...``, and so on. We ignore spaces between words. Implement the class ``MorseCode``, test with morsetest.cc. The file [morsecode.def](morsecode.def) contains the morse code definitions of the letters a-z. Characters outside this range should be ignored. Hint: in ``decode()``, use an ``istringstream`` to read morse codes from the code string.*
+1. *Morse code is a method of transmitting text information as a series of short and long signals ('dots' and 'dashes'). For example, the letter 'a' is coded as ``.-``, 'b' as ``-...``, and so on. We ignore spaces between words. Implement the class ``MorseCode``, test with morsetest.cc. The file [morsecode.def](morsecode.def) contains the morse code definitions of the letters a-z. Characters outside this range should be ignored. Hint: in ``decode()``, use an ``v`` to read morse codes from the code string.*
+
+    Some psuedocode, before I get started:
+
+    ```
+    definitions = read(morse.def) // Morse.def as an array of codes
+
+    procedure encode(text)
+        encoded_text = ""
+
+        for (letter in text)
+            index = letter.toLowerCase() as int // Cast to int
+            encoded_text += definitions[index]
+        
+        return encoded_text
+    end procedure
+
+    procedure decode(encoded_text)
+        decoded_text = ""
+
+        for (signal in encoded_text.split(" ")) // split on spaces
+            s = definitions.indexOf(signal) as char // cast as char
+            decoded_text += s
+        
+        return decoded_text
+    end procedure
+    ```
+
+    Also see my changes in [morsetest.cc](morsetest.cc). I thought it would be fun to see before and after.
+
+    Output, after compiling with ``g++ morsecode.cc morsetest.cc -o morse``:
+
+    ```console
+     --- text to code to text---
+    a man, a plan, a canal - panama
+    .- -- .- -. .- .--. .-.. .- -. .- -.-. .- -. .- .-.. .--. .- -. .- -- .-
+    AMANAPLANACANALPANAMA
+
+    --- code to text to code ---
+    .... . .-.. .-.. --- .-- --- .-. .-.. -..
+    HELLOWORLD
+    .... . .-.. .-.. --- .-- --- .-. .-.. -..
+    ```
 
 
 2. *The class ``Text`` represents texts that have several lines. The class has noconstructor, no destructor, no copy constructor and no assignment operator. Are these functions not necessary? Supply the class with an iterator so the program in [testtext.cc](testtext.cc) functions correctly. You must make additions to the class, but you may not change the representation of the text.*
