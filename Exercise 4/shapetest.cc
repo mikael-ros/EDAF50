@@ -26,10 +26,6 @@ int main() {
 	 * Call print() on the _same_ objects via a Shape* pointer. 
 	 * The output should be the same as above, but becomes
 	 * Shape / Shape / Shape instead.
-	 * This is because the print() function uses static binding, i.e.,
-	 * only the type of the pointer (Shape*) is used to determine
-	 * which of the functions to call, not the type of the object.
-	 * Solution: make print() virtual.
 	 */
 	Shape* psh = &aShape;
 	Shape* psq = &aSquare;

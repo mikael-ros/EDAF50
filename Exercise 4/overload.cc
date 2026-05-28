@@ -2,10 +2,12 @@
 using std::cout;
 
 struct B{
-     void f(int x) {cout << "B::f(" << x << ")\n";}
+    void f(int x) {cout << "B::f(" << x << ")\n";}
 };
 
-struct D :public B {
+struct D : public B {
+    using B::f;
+    
     void f() {cout << "D::f()\n";}
 };
 
@@ -19,14 +21,7 @@ void example1()
     d.f(17);
 }
 
-void example2()
-{
-    B& r = d;
-    r.f();
-}
-
 int main()
 {
     example1();
-    example2();
 }

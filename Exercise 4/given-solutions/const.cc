@@ -1,3 +1,5 @@
+// There seems to be no given solution for this question.
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -53,7 +55,7 @@ void example()
 
     foo(cf);
     // uncomment the below line and make sure you understand the error message
-    bar(cf);
+    // bar(cf); 
 
     qux(ncf);
     qux(cf);

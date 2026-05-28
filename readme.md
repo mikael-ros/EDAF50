@@ -9,7 +9,7 @@ This repository is associated with my [Notion database](https://mikaelrr.notion.
 - [x] [Exercise 1 (done 2026-05-26)](Exercise%201/readme.md)
 - [x] [Exercise 2 (done 2026-05-26)](Exercise%202/readme.md)
 - [x] [Exercise 3 (done 2026-05-27)](Exercise%203/readme.md)
-- [ ] Exercise 4
+- [x] [Exercise 4 (done 2026-05-28)](Exercise%204/readme.md)
 - [ ] Exercise 5
 - [ ] Exercise 6
 

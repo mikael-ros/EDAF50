@@ -1,4 +1,4 @@
-//#include "rational.h"
+#include "rational.h"
 #include <iostream>
 
 using namespace std;
