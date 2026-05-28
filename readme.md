@@ -16,6 +16,19 @@ This repository is associated with my [Notion database](https://mikaelrr.notion.
 ## Finished exams
 - [ ] 2025-06-03 (done )
 
+## How to use
+There are two ways to use this repository:
+1. Use the solutions as reference
+2. Fork the repository, remove or move my solutions (files and the answer texts), and use the repository as a template for your own exercises
+
+    You could, for example, run something like:
+    ```sh
+    find root -type d | while read -r dir; do
+        mkdir -p "$dir/mikael-solutions"
+        find "$dir" -maxdepth 1 -type f -exec mv {} "$dir/mikael-solutions/" \;
+    done
+    ```
+
 ## Permission
 
 Permission was granted to me, to use and publish the exercises and my solutions was granted by Sven Robertz 4th February 2026. There may also be another set of solutions on the official course page (currently Canvas), if nothing changes.
