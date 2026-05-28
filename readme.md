@@ -23,11 +23,12 @@ There are two ways to use this repository:
 
     You could, for example, run something like:
     ```sh
-    find root -type d | while read -r dir; do
+    find ./* -maxdepth 1 -path .git -prune -o -type d | while read -r dir; do
         mkdir -p "$dir/mikael-solutions"
         find "$dir" -maxdepth 1 -type f -exec mv {} "$dir/mikael-solutions/" \;
     done
     ```
+    (try at your own risk!)
 
 ## Permission
 
