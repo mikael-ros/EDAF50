@@ -29,6 +29,8 @@
     end procedure
     ```
 
+    If you want to see an implementation using the dictionary built into the [morse.def](morse.def) file, you can see the [given solution](given-solutions/morsecode.cc).
+
     Also see my changes in [morsetest.cc](morsetest.cc). I thought it would be fun to see before and after.
 
     Output, after compiling with ``g++ morsecode.cc morsetest.cc -o morse``:
