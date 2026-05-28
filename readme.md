@@ -34,6 +34,6 @@ There are two ways to use this repository:
 
 ## Permission
 
-Permission was granted to me, to use and publish the exercises and my solutions was granted by Sven Robertz 4th February 2026. There may also be another set of solutions on the official course page (currently Canvas), if nothing changes.
+Permission was granted to me, to use and publish the exercises and my solutions was granted by Sven Robertz 4th February 2026.
 
 However, it is not clear what license is associated with the files, if any. 
