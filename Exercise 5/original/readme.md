@@ -6,7 +6,7 @@ About: Iterators, lambdas, standard containers and algorithms.
 1. Morse code is a method of transmitting text information as a series of short and long signals ('dots' and 'dashes'). For example, the letter 'a' is coded as ``.-``, 'b' as ``-...``, and so on. We ignore spaces between words. Implement the class ``MorseCode``, test with morsetest.cc. The file *[morsecode.def](morsecode.def)* contains the morse code definitions of the letters a-z. Characters outside this range should be ignored. Hint: in ``decode()``, use an ``istringstream`` to read morse codes from the code string.
 
 
-2. The class ``Text`` represents texts that have several lines. The class has noconstructor, no destructor, no copy constructor and no assignment operator. Are these functions not necessary? Supply the class with an iterator so the program in *[testtext.cc](testtext.cc)* functions correctly. You must make additions to the class, but you may not change the representation of the text.
+2. The class ``Text`` represents texts that have several lines. The class has no constructor, no destructor, no copy constructor and no assignment operator. Are these functions not necessary? Supply the class with an iterator so the program in *[testtext.cc](testtext.cc)* functions correctly. You must make additions to the class, but you may not change the representation of the text.
 
 3. The program in *[personsorttest.cc](personsorttest.cc)* gives a lot of compilation errors. What is the cause of the errors? Fix the program.
 

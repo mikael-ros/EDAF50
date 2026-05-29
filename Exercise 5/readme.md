@@ -48,7 +48,14 @@
     ```
 
 
-2. *The class ``Text`` represents texts that have several lines. The class has noconstructor, no destructor, no copy constructor and no assignment operator. Are these functions not necessary? Supply the class with an iterator so the program in [testtext.cc](testtext.cc) functions correctly. You must make additions to the class, but you may not change the representation of the text.*
+2. *The class ``Text`` represents texts that have several lines. The class has no constructor, no destructor, no copy constructor and no assignment operator. Are these functions not necessary? Supply the class with an iterator so the program in [testtext.cc](testtext.cc) functions correctly. You must make additions to the class, but you may not change the representation of the text.*
+
+    When no constructor is defined, C++ automatically generates a default constructor. This default constructor calls all the default constructors of members, so ``lines`` is automatically constructed.
+
+    Likewise, the remaining functions, e.g. the copy constructor, destructor, and assignment operators, are automatically generated and also implicitly call members' counterparts. This is referred to as the "Rule of Zero", e.g. if the class only containes members that manage their own resources correctly, then we do not need to wirte any custom logic ourselves.
+
+    I'm going to move on to the exams now, because I feel frustrated with the complexity of the given solutions, and the lack of any given reasoning for them. 
+
 
 3. *The program in [personsorttest.cc](personsorttest.cc) gives a lot of compilation errors. What is the cause of the errors? Fix the program.*
 
