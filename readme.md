@@ -14,7 +14,7 @@ This repository is associated with my [Notion database](https://mikaelrr.notion.
 - [ ] [Exercise 6 (did not start)](Exercise%206/readme.md)
 
 ## Finished exams
-- [ ] 2025-06-03 (done )
+- [ ] [2025-06-03 (done )](Exams/250603/readme.md)
 
 ## How to use
 There are two ways to use this repository:
