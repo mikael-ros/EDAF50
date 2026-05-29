@@ -14,6 +14,7 @@ Rules for this run:
     - "find_if"
     - "c++ lambda"
 - ChatGPT
+
     Used to understand the question better. Ultimately ended up using a lot of what it suggested. Tried to learn from the results so I can actually do it on my own
 - Peeking at the official solution
 
