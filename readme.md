@@ -5,6 +5,8 @@ Obviously, it should be noted that these are the ramblings of someone learning C
 
 This repository is associated with my [Notion database](https://mikaelrr.notion.site/Shared-Notes-Hub-D-C-LTH-f2a47297b9b146dba372e02c4f789d55?source=copy_link).
 
+AI has not been used, unless specified.
+
 ## Finished exercises
 - [x] [Exercise 1 (done 2026-05-26)](Exercise%201/readme.md)
 - [x] [Exercise 2 (done 2026-05-26)](Exercise%202/readme.md)
@@ -14,7 +16,7 @@ This repository is associated with my [Notion database](https://mikaelrr.notion.
 - [ ] [Exercise 6 (did not start)](Exercise%206/readme.md)
 
 ## Finished exams
-- [ ] [2025-06-03 (done )](Exams/250603/readme.md)
+- [ ] [2025-06-03 (last attempted 2026-05-29)](Exams/250603/readme.md)
 
 ## How to use
 There are two ways to use this repository:
