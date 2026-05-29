@@ -11,7 +11,7 @@ This repository is associated with my [Notion database](https://mikaelrr.notion.
 - [x] [Exercise 3 (done 2026-05-27)](Exercise%203/readme.md)
 - [x] [Exercise 4 (done 2026-05-28)](Exercise%204/readme.md)
 - [ ] [Exercise 5 (started, but dnf 2026-05-29)](Exercise%205/readme.md)
-- [ ] [Exercise 6 (did not start)](Exercise%205/readme.md)
+- [ ] [Exercise 6 (did not start)](Exercise%206/readme.md)
 
 ## Finished exams
 - [ ] 2025-06-03 (done )
