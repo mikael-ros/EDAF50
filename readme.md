@@ -17,7 +17,7 @@ AI has not been used, unless specified.
 
 ## Finished exams
 Sorted by last attempt date descending
-- [ ] [2024-05-31 (last attempted 2026-05-30)](Exams/240531/readme.md)
+- [x] [2024-05-31 (last attempted 2026-05-30)](Exams/240531/readme.md)
 - [x] [2025-06-03 (last attempted 2026-05-29)](Exams/250603/readme.md)
 
 ## How to use
