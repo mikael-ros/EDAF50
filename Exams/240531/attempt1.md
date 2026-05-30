@@ -1,15 +1,11 @@
-# 2025-06-03
-Attempted 2026-05-29
+# 2024-05-31
+Attempted 2026-05-30
 
 *Author: Mikael*
 
 Personal rules for this run:
 - no help from the compiler (write all code in here)
-- external help (Google, AI, e.t.c.) is allowed when stuck, since I'm trying to learn
-
-    the help used will be listed below the question header
-
-    any question where I feel like I have used too much external help gets 0 points
+- external help like search engines is okay, but only if completely stuck. No AI
 - help from book is allowed, like on the exam
 
     however CTRL+F is not allowed, as I cannot do that in real life (if only!)
