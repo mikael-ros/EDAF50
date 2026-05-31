@@ -20,6 +20,8 @@ Sorted by last attempt date descending
 - [x] [2024-05-31 (last attempted 2026-05-30)](Exams/240531/readme.md)
 - [x] [2025-06-03 (last attempted 2026-05-29)](Exams/250603/readme.md)
 
+*note that when I refer to books as sources in the exams, the pages may not line up with your version.*
+
 ## How to use
 There are two ways to use this repository:
 1. Use the solutions as reference
